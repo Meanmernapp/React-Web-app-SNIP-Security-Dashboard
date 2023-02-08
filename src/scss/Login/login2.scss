@@ -1,0 +1,134 @@
+body{
+top: 0px;
+left: 0px;
+background: #FCFCFC 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.text_input{
+    display: flex;
+    margin: 0;
+    width: 422px;
+    height: 60px;
+   
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border: 2px solid #006837;
+    border-radius: 8px; 
+    opacity: 1;
+
+}
+.icon_img{
+    width: 22px;
+    height: 25px;
+    margin:auto;
+}
+.main{
+    margin: auto !important;
+    width: 423px;
+}
+.right_image{
+    /* Layout Properties */
+    width: 423px;
+height: 170px;
+margin-bottom: 30px;
+opacity: 1;
+}
+
+.user_password{
+    width: 350px;
+    height: 46px;
+    margin: auto 0;
+    text-align: left;
+    font: normal normal normal 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #006837;
+    opacity: 1;
+    border: none;
+}
+input[type=password]:focus {
+    outline: none;
+}
+input[type=password]::placeholder {
+    color: #00506A;
+}
+.right_textt{
+    width: 262px;
+    height: 19px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    font: normal normal bold 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #006837;
+    opacity: 1;
+}
+.bottom_right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: auto;
+    height: 24px;
+    letter-spacing: 0px;
+    color: #63B3CE;
+    opacity: 1;
+}
+.welcome_text{
+    margin: 0 32px;
+    width: 359px;
+    height: 29px;
+    text-align: right;
+    letter-spacing: 0px;
+    color: #006837;
+    text-align: center;
+    font: normal normal normal 24px/29px Montserrat;
+    opacity: 1; 
+}
+.welcome_text span {
+    width: 204px;
+    height: 29px;
+    font: normal normal bold 24px/29px Montserrat;
+    letter-spacing: 0px;
+    color: #006837;
+
+
+}
+.token_text{
+    width: 307px;
+    height: 24px;
+    top: 596px;
+    left: 1287px;
+    text-align: left;
+    font: normal normal normal 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #006837;
+    opacity: 1; text-align: right;
+    margin: 0 32px;
+}
+.user_input{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.otp_text{
+    margin: 4px;
+    width: 58px;
+    height: 60px;
+    text-align: center;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border: 2px solid #006837;
+    border-radius: 8px;
+    opacity: 1;
+}
+.whatever{
+    background: #006837 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    width: 422px;
+    height: 52px;
+    padding-left: 30% ;
+    padding-top: 13px;
+    font: normal normal bold 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #FCFCFC;
+}

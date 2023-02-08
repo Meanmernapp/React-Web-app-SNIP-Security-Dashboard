@@ -1,0 +1,257 @@
+
+.navbar{
+    height: 100vh;
+    width: 70px;
+    position: fixed !important;
+    background: #CBCDD9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.nav-menu{
+
+    background-color: #CBCDD9 0% 0% no-repeat padding-box;
+    width: 4.5%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transition: 850ms;
+}
+.nav-menu.active{
+    transition: 350ms;
+}
+
+.nav-text{
+    color: green;
+    width: 4.375em !important;
+    height: 40px !important;
+    padding: auto !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #CBCDD9;
+    padding: 0;
+    width: 4.375em !important; 
+    list-style: none;
+    height: 50px;
+    list-style-type: none !important
+}
+.nav-text:focus{
+    width: 4.375em !important;
+    height: 40px !important;
+    background-color: #707070;
+
+}
+.nav-text a:focus{
+    background-color: #707070;
+    width: 4.375em !important; 
+    height: 40px !important; 
+}
+.nav-button:focus{
+    background-color: #707070;
+    width: 4.375em !important; 
+    height: 40px;
+
+}
+
+.nav-text::before{
+    display: none;
+}
+.nav-text a {
+         text-decoration: none;
+         width: 4.375em !important;  
+height: 40px;
+         list-style-type: none !important;
+         padding: 0px;
+         border-radius: 4px;
+}
+
+.navbar ul {
+    margin-top: 5em;
+    padding: 0 !important;
+}
+// .navbar-toggle{
+//      background-color: white;
+//      width: 100%;
+//      height: 80px;
+//      display: flex;
+//   justify-content: start;
+//   align-items: start;
+// }
+.display_image{
+    position: absolute;
+    height: 60px;
+    bottom: 10px;
+    left: 5px;
+    border-radius: 50%;
+}
+.home{
+
+    top: 100px;
+    margin-left: 5em;
+    margin-right: 5em;
+    // margin-top: 100px;
+    height: 100vh;
+    width: 100vw;
+}
+.home_main_div{
+    width: 90vw;
+    display: flex !important;
+    padding-top: 30px;
+    justify-content: space-between;
+
+}
+.snip_image{
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.home_user_text{
+    text-align: left;
+    font: normal normal bold 48px/58px Montserrat;
+    letter-spacing: 0px;
+    color: #006837; 
+    opacity: 1;
+}
+
+.home_user_text span{
+    
+    text-align: left;
+    font: normal normal normal 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+.home_svgs{
+    
+    background: transparent 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.home_button_add{
+    width: 220px;
+    height: 49px;
+    margin-left: 3px;
+    background: #006837 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+    font: normal normal bold 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #CBCDD9;
+    opacity: 1;
+}
+.homeAddButton{    
+        font-size: large;
+}
+
+.home_button_delete{
+    width: 230px;
+    height: 49px;
+    margin-left: 3px;
+    background: #E24C4B 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+    font: normal normal bold 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.search_box_main{
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 4px #00000059;
+    border-radius: 4px;
+    opacity: 1;
+    display: flex;
+    width: 1085px;
+
+}
+.input_text{
+    width: 100%;
+    height: 35px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    border: none;
+
+}
+.search_box_main button{
+    height: 35px;
+}
+.home_search_button{
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;    border: none;
+
+}
+input [type=text]::placeholder{
+margin-left: 10px;
+}
+
+.home_card{
+    margin-top: 20px;
+    width: 272px;
+    height: 348px;
+}
+.home_card_details{
+    border-top: 2px solid #006837;
+    border-bottom: 2px solid #006837;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.home_card_img{
+    margin-top: 20px !important;
+    height: 140px;
+    width: 140px;
+    margin: auto;
+    border-radius: 50%;
+}
+.home_card_title{
+    text-align: right;
+    font: normal normal bold 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #006837;
+    margin-left: 100px;
+    opacity: 1;
+}
+.home_card_title_main{
+    display: flex;
+}
+.home_card_title_icon{
+    opacity: 1;
+    height: 15px;
+    color: #006837;
+    width: 10px;
+}
+.home_card_span_value{
+    text-align: left;
+    font: normal normal normal 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.home_card_p_value{
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+    text-align: right;
+    float: right;
+    font: normal normal normal 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+.home_card_values{
+    display: flex;
+}
+.card_main_div{
+    display: flex;
+}
+.home_top_buttons{
+     margin-right: 60px;
+}
+.fa-chevron-circle-right:before, .fa-circle-chevron-right:before{
+    color: #006837;
+}

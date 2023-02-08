@@ -1,0 +1,20 @@
+
+.noPerson{
+    margin: 5em 25em 5em !important;
+    width: 25em;
+    height: 25em;
+    &__img{
+        width: 15em;
+        height: 15em;
+        align-items: center;
+        margin-left: 5em;
+    }
+    &__p{
+        margin-top: 1em;
+        text-align: center;
+        font: normal normal bold 20px/40px Segoe UI;
+        letter-spacing: 0px;
+        color: #006837;
+        opacity: 1;
+    }
+}

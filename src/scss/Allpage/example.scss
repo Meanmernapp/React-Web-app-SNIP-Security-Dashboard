@@ -1,0 +1,321 @@
+body{
+    height: 100vh;
+}
+.example_main{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    opacity: 1 !important;
+    width: 490px !important;
+    align-items: center;
+    height: 100px !important;
+    padding-left: 10px !important;
+    margin-top: 40px !important;
+    padding-top: 10px !important;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+.example_right_main{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    opacity: 1 !important;
+    width: 490px !important;
+    height: 100px !important;
+    padding-left: 10px !important;
+    // margin-top: 40px !important;
+    // padding-top: 10px !important;
+    margin-left: 2%;
+    margin-bottom: 10px;
+
+}
+.name_nav{
+    display: flex !important;
+}
+.home_vertical{
+    display: flex;
+}
+.example_hr{
+    border: 2px solid #006837;
+     width: 90%;
+     margin-bottom: 0px;
+     margin-top: 0px;
+}
+.example_p{
+    margin-top: 5px;
+}
+.example_h5{
+    margin-top: 0px;
+    text-align: left;
+    font: normal normal bold 18px/27px Segoe UI;
+    letter-spacing: 0px;
+    padding: 0px 0;  
+  color: #006837;
+    opacity: 1;
+    margin-bottom: -10px;
+    text-decoration: none;
+}
+
+.example_h3{
+    margin-top: 0px;
+    text-align: left;
+    font: normal normal normal 14px/20px Segoe UI;
+    letter-spacing: 0px;
+color: #CBCDD9;
+    opacity: 1;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+.example_p{
+    margin-top: 0px;
+    text-align: left;
+    font: normal normal normal 14px/20px Segoe UI;
+    letter-spacing: 0px;
+color: #000000;
+    opacity: 1;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+.example_p{
+    text-align: left;
+    font: normal normal bold 18px/21px Segoe UI;
+    letter-spacing: 0px;
+    color: #CBCDD9;
+    opacity: 1;
+    margin-bottom: 5px;
+}
+.dbbutton{
+    justify-content: space-between !important;
+
+    margin-right: 20px;
+    display: flex !important;
+}
+.vl {
+    border-left: 6px solid green;
+    height: 98%;
+    margin-top: 2em;
+    margin-left:  2em;    
+    margin-right: 2em;
+}
+.example_p_two{
+    text-align: left;
+font: normal normal normal 12px/15px Montserrat;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 5px;
+}
+.collapse_div{
+    background-color: #006837;
+    width: 450px;
+    height: 50px;
+    
+}
+.ex_main_img{
+    height: 5em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.ex_input_div{
+    display: flex;
+    justify-content: flex-start;
+}
+.ex_main_input{
+    display: flex;
+    border: 3px solid green;
+    width: 650px;
+    margin-left: 2em;
+    margin-top: 2.5em;
+    height: 3.125em;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 2.4375em;
+    opacity: 1;
+}
+// // .accordion-button::after{
+// // // }
+.accordion-item:first-of-type .accordion-button::after{
+    content: none !important;
+    outline: none !important;
+
+}
+
+// .ex_acc_header{
+//     width: 20px;
+// }
+// .accordion-item{
+//     width: 50px;
+// justify-content: center;
+// border: none !important;
+// }
+.accordion-button{
+    width: 100px;
+    outline: none !important;
+    align-items: center;
+    display: inline;
+    background-color: #FFFFFF !important;
+    border: none !important;
+}
+// .accordion-button::after{
+//     border: none;
+//     outline: none !important;
+//     box-shadow: none !important;
+// }
+// .accordion-body{
+//     width: 400px !important;
+//     border: 1px solid black;
+//     float: left;
+//     justify-content: space-between !important;
+// }
+// .accordion-button:focus{
+//  border: none !important;
+//  border-color: none !important;
+//  box-shadow: none !important;
+// }
+// .fa-circle-caret-down:focus{
+//     color: green !important;
+// background-color: #006837 !important;
+// }
+// .button.accordion-button{
+//     height: 120px !important;
+// }
+// .accordion-button:not(.collapsed) {
+//     color: green !important;
+//     display: inline;
+//     margin-right: 10px;
+//     width: 430px;
+//     padding-top: 10px !important;
+//     // background-color: #e7f1ff;
+//     // box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+// }
+// .accordion-button.collapsed{
+//     display: inline;
+//     margin-right: 10px;
+//     height: 120px !important;
+//     width: 430px;
+// }
+// .button.accordion-button.collapsed{
+//     height: 120px !important;
+// }
+// <div className='home container'>
+// <Accordion defaultActiveKey='0' style={{width: '700px' }}>
+//   {phone &&
+//     mainData.map((item, index) => (
+//       <Accordion.Item eventKey={index} key={index}>
+//         <Accordion.Header onClick={() => setOpen(!open)} className=''>
+//           <div className='dbbutton'>
+//             {item?.names && (
+//               <div className='example_main'>
+//                 {item?.names?.slice(0, 1).map((val) => (
+//                   <>
+//                     <div>
+//                       <h3>{val.display}</h3>
+//                     </div>
+//                     <div>
+//                       <div style={{ display: open ? 'none' : 'block' }}>
+//                         <p>sdfas</p>
+//                         <hr />
+//                         <p>sdf</p>
+//                       </div>
+//                     </div>
+//                   </>
+//                 ))}
+//               </div>
+//             )}
+//             <i class='fa-solid fa-circle-chevron-down'></i>
+//           </div>
+//         </Accordion.Header>
+//         <Accordion.Body>
+//           {item?.addresses?.slice(0, 1).map((val) => (
+//             <p className='example_h3'>{val.display}</p>
+//           ))}
+//           {item?.addresses?.slice(0, 1).map((val) => (
+//             <>
+//               <p className='example_h3'>{val.display}</p>
+//               <hr className='example_hr' />
+//             </>
+//           ))}
+//           {item?.phones?.slice(0, 1).map((val) => (
+//             <p className='example_h3'>{val.display_international}</p>
+//           ))}
+//         </Accordion.Body>
+//       </Accordion.Item>
+//     ))}
+// </Accordion>
+// </div>
+.whatever1{
+    display: block !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+.whatever2{
+    display: flex !important;
+    width: 100% !important;
+    height: 1.5em;
+    justify-content: space-between !important;
+}
+.accordion-button{
+    display: inline !important;
+    justify-content: space-between !important;
+}
+.ex_acc_main{
+    display: flex;
+
+}
+.home_kainat{
+    display: flex !important;
+    justify-content: space-around;
+}
+.home_left_div{
+    display: flex;
+    justify-content: space-between;
+}
+.home_right_div{
+    margin-left: 2em;
+
+}
+
+.ex_first_p{
+    text-align: left;
+font: normal normal normal 20px/27px Segoe UI;
+letter-spacing: 0px;
+    margin-top: 2em !important;
+    padding-top: .75em !important;
+    padding-left: 2em;
+color: #000000;
+
+opacity: 1;
+}
+.ex_second_p{
+    text-align: left;
+font: normal normal normal 20px/27px Segoe UI;
+letter-spacing: 0px;
+    margin-top: 2em !important;
+    padding-top: .75em !important;
+    padding-left: 2em;
+color: #000000;
+// margin-left: 10%;
+opacity: 1;
+}
+.accordion-button{
+    width: 29.75em !important;
+}
+.h2.accordion-header{
+    width: 25em !important;
+}
+
+.accordion-item{
+    width: 30em !important;
+    margin-bottom: 2em;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 4px #00000099;
+}
+.ic_sort_up{
+    
+width: 24px;
+height: 14px;
+    margin-top: -.5em;
+}
+.ic_cancel{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}

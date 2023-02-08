@@ -1,0 +1,128 @@
+.rightimg_text{
+    letter-spacing: 0px;
+    color: #006837;
+    margin-bottom: 0;
+    text-align: center;
+    font: normal normal bold 24px/29px Montserrat;
+
+}
+.rightimg_text > span{
+    font-weight: bold;
+}
+body{
+    top: 0px;
+    left: 0px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
+    .text_input{
+        margin-top: 10px;
+        display: flex;
+        width: 422px;
+        height: 60px;
+        border: 2px solid #006837;
+        border-radius: 8px;
+        opacity: 1;
+    
+    }
+    .icon_img{
+        width: 22px;
+        height: 25px;
+        margin:auto;
+    }
+
+    .main_col{
+        margin: auto !important;
+        margin-top: 20% !important;
+        // margin: auto !important;
+        width: 423px;
+        
+    }
+    
+    .left_image{
+    margin-top: 20%;
+    margin-left: 25%;
+    width: 300px;
+    height: 300px;
+    
+    }
+    .right_image{
+        /* Layout Properties */
+        width: 423px;
+    height: 170px;
+    opacity: 1;
+    }
+    
+    .user_name{
+        width: 350px;
+        height: 46px;
+        margin: auto 0;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal normal 20px/24px Montserrat;
+        letter-spacing: 0px;
+        color: #00506A;
+        opacity: 1;
+        border: none;
+    }
+    input[type=text]:focus {
+        outline: none;
+    }
+    .right_text{
+        width: 262px;
+        height: 19px;
+        margin: auto;
+        margin-top: 10px;
+        /* UI Properties */
+        text-align: center;
+        font: normal normal bold 16px/19px Montserrat;
+        letter-spacing: 0px;
+        color: #63B3CE;
+        opacity: 1;
+    }
+    .submit_button{
+        width: 422px;
+        height: 52px;    
+        background: #707070 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 8px;
+        color: #FCFCFC;
+        opacity: 1;
+    }
+    .bottom_right{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        width: auto;
+        height: 24px;
+        letter-spacing: 0px;
+        color: #006837;
+        opacity: 1;
+    }
+    .error_msg{
+        font-size: 12px;
+        width: 100%;
+        color: red;
+    }
+    .success_msg{
+        width: 100%;
+        background-color: #0f834d;
+        color: #fff;
+        font-weight: 600;
+    }
+    .main_div{
+        height: 100vh;
+    }
+    .main_div_c2
+    {
+        background: #CBCDD9 0% 0% no-repeat padding-box;
+        box-shadow: 4px 4px 8px #FFFFFF;
+    opacity: 1;
+    }
+
+
+
+
+
