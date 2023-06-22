@@ -1,41 +1,45 @@
 .settings_div{
-    position: absolute;
+    // position: absolute;
     background: #FFFFFF99 0% 0% no-repeat padding-box;
-    top: 25%;
-    left: 5%;
-    width: 240px;
-    height: 220px;
+    margin-top: 4em !important;
+    // height: 220px;
     box-shadow: 4px 4px 8px #FFFFFF;
     border-radius: 12px;
     opacity: 1;
 }
 .navpanel_h2{
-    position: absolute;
-    top: 20px;
+    padding-top: 1.5em;
     text-align: center;
-    font: normal normal bold 32px/40px Montserrat;
+    font: normal normal bold 30px/42px Montserrat;
     letter-spacing: 0px;
-color: #006837;
+    color: #FFFFFF;
     opacity: 1;
-    left: 100px;
+    justify-content: center;
+    @media only screen and (max-width: 992px) {
+        font: normal normal bold 20px/32px Montserrat;
+    }
 }
 .setting-img{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 70px;
-    color: #006837;
-    top: 20px;
+    // position: absolute;
+    height: 5em;
+    margin: 0 auto;
+    // align-self: center;
 }
 .setting_h3{
-    position: absolute;
-    top: 140px;
     text-align: center;
     font: normal normal normal 20px/24px Montserrat;
     letter-spacing: 0px;
-    color: #006837;
+    color: #707070;
     opacity: 1;
-    left: 30px;
+    
+    @media only screen and (max-width: 992px) {
+        font: normal normal normal 16px/20px Montserrat;
+      }
+}
+.bg-img{
+    background-image: url('../../images/stock-photo-male-it-specialist-holds-laptop-and-discusses-work-with-female-server-technician-they-re-standing-1062915392.png') !important;
+    height: 100vh !important;
+    width: 100%;
 }
 
 .settings_div_2{
@@ -64,7 +68,15 @@ color: #006837;
     text-align: center;
     font: normal normal normal 20px/24px Montserrat;
     letter-spacing: 0px;
-    color: #006837;
+    color: #707070;
     opacity: 1;
     left: 30px;
+}
+.container-size{
+    width: 100%;
+    padding: 1em 3em 1em 6em !important ;
+    @media only screen and (max-width: 768px) {
+        padding: 1em 1em 1em 5em !important ;
+
+      }
 }

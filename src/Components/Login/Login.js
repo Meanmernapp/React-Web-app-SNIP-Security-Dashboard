@@ -1,82 +1,132 @@
-import React, {useState} from 'react'
-import img1 from '../../images/Password/SNIP-SMALL.png'
-import img3 from '../../images/ic-user.svg'
-import img2 from '../../images/SNIP-MEDIUM.png'
-import { Row, Col } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import ModalGen from './ModalGen'
+import React, { useState, useRef } from "react";
+import img1 from "../../images/color_logo_citras.png";
+import { ErrorMessage, Formik, Form, useField, Field, useFormik } from "formik";
+import img3 from "../../images/ic-user.svg";
+import img2 from "../../images/stock-photo-male-it-specialist-holds-laptop-and-discusses-work-with-female-server-technician-they-re-standing-1062915392.png";
+// import { Row, Col } from 'react-bootstrap'
+import ModalGen from "./ModalGen";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+// import ResponseOk from "../../../UserDashBoard/pages/ResponseOk";
+import ResponseError from "../../Components/UserDashBoard/pages/ResponseError";
+import { useDispatch, useSelector } from "react-redux";
+import * as Yup from "yup";
+import { getloginUsersData } from "../../features/loginSlice";
+import { responseErrorFunc } from "../../features/userSlice.js";
 
 const Login = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
+  const formRef = useRef();
+  const [successmsg, setSuccessMessage] = useState("");
 
-  const [email, setEmail] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [successmsg, setSuccessMessage] = useState('')
-  const handleEmailChange  = (e) => {
-    setSuccessMessage('')
-    setEmailError('')
-    setEmail(e.target.value);
-  }
+  const handleClick = async () => {
+    await axios
+      .get(
+        `http://38.65.139.14:8081/corporate-citras-v1/login-service/check-user-email/${formRef.current.values.email}`
+      )
+      .then((response) => {
+        console.log(response);
+        dispatch(getloginUsersData(response.data.data));
+        console.log(formRef.current.values.email);
+        navigate("/log-in-password-and-token");
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log(err.response.data.message);
+        dispatch(responseErrorFunc(err.response.data.message));
+        setShow(true);
+      });
+  };
+  
+  const SignUpSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Email is not valid")
+      .required("Email is required"),
+  });
 
-  const handleFormSubmit = (e) =>{
-    e.preventDefault()
-    // checking if email is empty
-    if(email !== '')
-    {
-      // check some other condition
-      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      if(emailRegex.test(email))
-      {
-        setEmailError('')
-      }
-      else{
-        setEmailError('Invalid Email')
-      }
-    }else{
-      setEmailError('Email Required')
-    }
-  }
   return (
-    <div >
+    <div className="container-fluid mx-0 ">
+      <div className="row">
+        <div className="col-sm-0 col-lg-6 mx-0 px-0">
+          <img src={img2} className="w-100 left_image" />
+        </div>
+        <div className="col-sm-12 col-lg-6 my-auto d-flex flex-column">
+          <ResponseError
+            to="/log-in-username"
+            show={show}
+            onHide={() => setShow(false)}
+          />
 
-      <Row className='m-0 p-0'>
-      <Col xs={6} className='main_div container-fluid'  >
-          <Image src={img2}  className='left_image' />
-        </Col>
-        <Col xs={6} className=' main_div main_div_c2 container-fluid'  >
-          <div className='main'>
-            <Image
-              src={img1}
-              className='right_image_snip'
-              alt='color_logo_citras'
+          <Formik
+            initialValues={{
+              email: "",
+            }}
+            validationSchema={SignUpSchema}
+            validateOnChange={false}
+            validateOnBlur={false}
+            onSubmit={(values) => {
+              console.log("values", values);
+            }}
+            innerRef={formRef}>
+            {({
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              setFieldValue,
+              values,
+            }) => (
+              <div className="my-auto d-flex flex-column">
+                <img
+                  src={img1}
+                  className="img-size-right"
+                  alt="color_logo_citras"
+                />
+                {/* {successmsg && <div className="success_msg">{successmsg}</div>} */}
+                <br />
 
-            />
-            {successmsg && <div className='success_msg'>{successmsg}</div>}
-            <br />
-            <form onSubmit={handleFormSubmit}>
-            <div  className='text_input'>
-              <input className='user_name' type='text' name='username' id='' onChange={handleEmailChange}  value={email}/>
-              <Image src={img3} className='icon_img'></Image>
-               
-            </div>
-            {emailError && <ModalGen value={emailError} /> }
-            <br />
-            <button type='submit' className='submit_button'>INICIAR SESIÓN</button>
-            </form>
-            <div className='right_text'>¿OLVIDASTE TU CONTRASEÑA?</div>
-            </div>            
-        </Col>
-      </Row>
-      <p className='bottom_right'> © 2022. All rights reserved MySearch. </p>
+                <Form
+                  className="d-flex flex-column align-items-center"
+                  onSubmit={handleSubmit}>
+                  <div className="text_input">
+                    <input
+                      className="user_name"
+                      name="email"
+                      value={values.email}
+                      onBlur={handleBlur}
+                      onChange={handleChange}></input>
+                    <img src={img3} className="icon_img" />
+                  </div>
+                  {/* {errors.email ? <ModalGen value={errors.email} /> : undefined} */}
+                  {touched?.email && errors.email && <div style={{color:"red",fontSize:"14px"}}>{errors.email}</div>}
+
+                  <br />
+                  <div className="submit-div ">
+                    <button
+                      type="submit"
+                      className="submit_button p-2"
+                      onClick={handleClick}>
+                      INICIAR SESIÓN
+                    </button>
+                    <div className="right_text">¿OLVIDASTE TU CONTRASEÑA?</div>
+                  </div>
+                </Form>
+              </div>
+            )}
+          </Formik>
+        </div>
+      </div>
+      <p className="bottom_right"> © 2022. All rights reserved MySearch. </p>
     </div>
 
     // <div className='main'>
     //     <Image src={img2} fluid  className="left-image"/>
 
     //     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

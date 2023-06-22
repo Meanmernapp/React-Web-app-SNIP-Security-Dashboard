@@ -1,3 +1,5 @@
-<svg id="ic-sort-up" xmlns="http://www.w3.org/2000/svg" width="22.818" height="15.456" viewBox="0 0 22.818 15.456">
-  <path id="sort-up-solid" d="M37.836,72.406H18.854c-1.707,0-2.56-2.4-1.356-3.793L26.989,57.6a1.727,1.727,0,0,1,2.7,0l9.491,11.01C40.4,70.01,39.543,72.406,37.836,72.406Z" transform="translate(-16.934 -56.95)" fill="#006837"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="9.41" height="5.494" viewBox="0 0 9.41 5.494">
+  <g id="ic-sort-up" transform="translate(9.41 5.494) rotate(180)">
+    <path id="sort-up-solid" d="M25.553,62.444H17.726a.79.79,0,0,1-.559-1.348l3.914-3.914a.786.786,0,0,1,1.115,0L26.109,61.1A.789.789,0,0,1,25.553,62.444Z" transform="translate(-16.934 -56.95)"/>
+  </g>
 </svg>

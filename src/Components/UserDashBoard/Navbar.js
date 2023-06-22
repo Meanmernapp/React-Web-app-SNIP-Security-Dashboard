@@ -1,37 +1,183 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import img1 from '../../images/NavBar/ic-menu.svg'
-import img2 from '../../images/SNIP-MEDIUM.png'
-import { Image } from 'react-bootstrap'
-import { SidebarData } from './SidebarData'
-import { ListItemSecondaryAction } from '@material-ui/core'
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import img1 from "../../images/NavBar/ic-menu.svg";
+import img2 from "../../images/white_logo_citras.png";
+import { Image } from "react-bootstrap";
+import { SidebarData } from "./SidebarData";
+import { ListItemSecondaryAction } from "@material-ui/core";
+import { valueToPercent } from "@mui/base";
+import { AppContext } from "../../App";
+import Dashboard from "./pages/SubMenu/Dashboard";
+import ManualInteractivo from "./pages/SubMenu/ManualInteractivo";
+import ExtractoTelefono from "./pages/SubMenu/ExtractoTelefono";
+import Switch from "./pages/SubMenu/Switch";
+import Case from "./pages/SubMenu/Case";
+import Analysis from "./pages/SubMenu/Analysis";
+import Correlation from "./pages/SubMenu/Correlation";
+import Estadiscas from "./pages/SubMenu/Estadiscas";
+import Report from "./pages/SubMenu/Report";
+import Users from "./pages/SubMenu/Users";
+import Departments from "./pages/SubMenu/Departments";
+import Images from "./pages/SubMenu/Images";
+import Connections from "./pages/SubMenu/Connections";
+import Alerts from "./pages/SubMenu/Alerts";
+import Log from "./pages/SubMenu/Log";
+import Configurations from "./pages/SubMenu/Configurations";
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false)
+  const { val1 } = useContext(AppContext);
+  const [sidebar, setSidebar] = useState(false);
+  const navigate=useNavigate()
+  const [subMenu, setSubMenu] = useState();
+  // const [value, setValue] = useState(0)
+  const [check, setCheck] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+  let value;
+  const handleClick = (item) => {
+    value = item.title;
+    const values = val1.state.inputText.value;
+    console.log(values);
+    console.log(value);
+    console.log(check);
+    console.log(check == true && value == val1.state.inputText.value);
 
-  const showSidebar = () => setSidebar(!sidebar)
+    if (val1.state.check == true && value == val1.state.inputText.value) {
+      val1.dispatch({ type: "UPDATE_CHECK", data: false });
+      val1.dispatch({ type: "UPDATE_INPUT", data: { value } });
+      val1.dispatch({ type: "UPDATE_MARGIN", data: false });
+    } else if (
+      val1.state.check === true &&
+      value != val1.state.inputText.value
+    ) {
+      val1.dispatch({ type: "UPDATE_CHECK", data: true });
+      val1.dispatch({ type: "UPDATE_MARGIN", data: true });
+      val1.dispatch({ type: "UPDATE_INPUT", data: { value } });
+      val1.dispatch({ type: "UPDATE_SIDEBAR", data: true });
+      console.log("Kiran");
+    } else {
+      val1.dispatch({ type: "UPDATE_CHECK", data: true });
+      val1.dispatch({ type: "UPDATE_MARGIN", data: true });
+      val1.dispatch({ type: "UPDATE_INPUT", data: { value } });
+      val1.dispatch({ type: "UPDATE_SIDEBAR", data: true });
+
+      console.log("Rashid");
+    }
+    console.log(val1.state.check);
+  };
+
   return (
     <>
-      <div className='navbar'>
-        <Image src={img2} className='snip_image' />
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul>
-            {SidebarData.map((item, index) => {
+      <div id="sidebar">
+        <img
+          src={img2}
+          className="snip_image mt-2 mx-auto d-flex align-items-center justify-content-center"
+        />
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <div className="nav-menu-items d-flex flex-column align-items-center mt-5">
+            {SidebarData.map((item) => {
               return (
-                <li key={index} className={item.cName}>
-                    <Link to={item.path} className='nav-text'>{item.icon}</Link>
-                </li>
-              )
+                <button
+                type="button" class="btn btn-secondary"
+                  onClick={() => handleClick(item)}
+                  className={
+                    item.title == val1.state.inputText.value &&
+                    val1.state.check === true
+                      ? "nav-selected"
+                      : "nav-text"
+                  }
+                  data-bs-toggle="tooltip" data-bs-placement="right" title={item?.title}
+                >
+                  {item.icon}
+                </button>
+              );
             })}
-          </ul>
+            {/* </div> */}
+          </div>
         </nav>
-        <Image
-          className='display_image'
-          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-wq5bwwbn0cFhs2F4nWn1ZGgOrsNG3JKbQ&usqp=CAU'
-        ></Image>
+        {val1.state.inputText.value === "Dashboard" &&
+        val1.state.check === true ? (
+          <Dashboard />
+        ) : null}
+        {val1.state.inputText.value === "Manual" &&
+        val1.state.check === true ? (
+          <ManualInteractivo />
+        ) : null}
+        {val1.state.inputText.value === "Extract" &&
+        val1.state.check === true ? (
+          <ExtractoTelefono />
+        ) : null}
+        {val1.state.inputText.value === "Switch" &&
+        val1.state.check === true ? (
+          <Switch />
+        ) : null}
+        {val1.state.inputText.value === "Case" && val1.state.check === true ? (
+          <Case />
+        ) : null}
+        {val1.state.inputText.value === "Analysis" &&
+        val1.state.check === true ? (
+          <Analysis />
+        ) : null}
+        {val1.state.inputText.value === "Correlation" &&
+        val1.state.check === true ? (
+          <Correlation />
+        ) : null}
+        {val1.state.inputText.value === "Estadisticas" &&
+        val1.state.check === true ? (
+          <Estadiscas />
+        ) : null}
+        {val1.state.inputText.value === "Report" &&
+        val1.state.check === true ? (
+          <Report />
+        ) : null}
+        {/* {val1.state.inputText.value === 'Report' ? <Report /> : null} */}
+        {val1.state.inputText.value === "Users" && val1.state.check === true ? (
+          <Users />
+        ) : null}
+        {val1.state.inputText.value === "Department" &&
+        val1.state.check === true ? (
+          <Departments />
+        ) : null}
+        {val1.state.inputText.value === "Images" &&
+        val1.state.check === true ? (
+          <Images />
+        ) : null}
+        {val1.state.inputText.value === "Connections" &&
+        val1.state.check === true ? (
+          <Connections />
+        ) : null}
+        {val1.state.inputText.value === "Alerts" &&
+        val1.state.check === true ? (
+          <Alerts />
+        ) : null}
+        {val1.state.inputText.value === "Log" && val1.state.check === true ? (
+          <Log />
+        ) : null}
+        {val1.state.inputText.value === "Configuration" &&
+        val1.state.check === true ? (
+          <Configurations />
+        ) : null}
+         <button
+                type="button" class="btn btn-secondary"
+                  onClick={() => {localStorage.clear()
+                  navigate("/log-in-username")
+                  }}
+                  className="nav-text"
+                  style={{display:"flex",justifyContent:"center",alignItems:"center",color:"#fff"}}
+                  data-bs-toggle="tooltip" data-bs-placement="right" title={"logout"}
+                >
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </button>
+        <div className="profile-img">
+          <img
+            className="  display_image mt-2 mx-auto d-flex align-items-center justify-content-center"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-wq5bwwbn0cFhs2F4nWn1ZGgOrsNG3JKbQ&usqp=CAU"
+          />
+        </div>
+
+        
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

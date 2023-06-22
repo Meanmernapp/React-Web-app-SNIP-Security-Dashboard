@@ -1,0 +1,192 @@
+.switch-example {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 4px #00000099;
+  opacity: 1;
+  width: 25em !important;
+  border-radius: 4px;
+  margin: 0 auto 1em;
+  border-radius: 12px;
+
+  @media only screen and (max-width: 1210px) {
+    // justify-content: space-around !important;
+    // margin-right: 0em !important;
+  }
+
+  &__icAdd-pdf {
+    height: 3em;
+    margin-bottom: 0.2em;
+  }
+
+  &__icAdd-layer {
+    height: 2.5em;
+    margin-bottom: 0.2em;
+  }
+
+  &__icAdd-download {
+    height: 1em;
+    float: right;
+    align-items: right;
+  }
+
+  &__div {
+    &__fp {
+      text-align: left;
+      font: normal normal 600 10px/12px Montserrat;
+      letter-spacing: 0px;
+      color: #707070;
+
+      @media only screen and (max-width: 1200px) {
+        font: normal normal 500 9px/11px Montserrat !important;
+        letter-spacing: 0px;
+        color: #707070;
+
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      padding: 0 !important;
+      margin: 0 !important;
+      opacity: 1;
+    }
+
+    &__sp {
+      text-align: left;
+      font: normal normal 600 10px/12px Montserrat;
+      letter-spacing: 0px;
+      margin: 0px !important;
+      padding: 0px;
+      text-transform: capitalize;
+
+      @media only screen and (max-width: 1200px) {
+        font: normal normal 600 9px/11px Montserrat !important;
+        letter-spacing: 0px;
+        color: #00506a;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      color: #00506a;
+      opacity: 1;
+    }
+
+    &__tp {
+      text-align: left;
+      font: normal normal normal 10px/12px Montserrat;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    &__ep {
+      text-align: left;
+      font: normal normal normal 8px/12px Montserrat;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    &__rowp {
+      text-align: left;
+      font: normal normal bold 10px/15px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+  }
+
+  &__buttonOk {
+    background: #63b3ce 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 1px #00000099;
+    border-radius: 4px;
+    opacity: 1;
+    font: normal normal bold 10px/13px Montserrat;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    text-align: center;
+    border: none;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 139px;
+    height: 25px;
+
+    &__btnimg {
+      margin: 0 0.5em;
+      height: 1em;
+    }
+  }
+}
+
+.box {
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.card-class {
+  display: flex;
+  flex-wrap: wrap;
+  // align-items: left;
+  justify-content: left;
+
+  @media only screen and (max-width: 1210px) {
+    justify-content: space-around !important;
+  }
+}
+
+.card-table {
+  &__fc {
+    text-align: left;
+    font: normal normal normal 8px/13px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    text-transform: uppercase;
+  }
+
+  &__sc {
+    text-align: right;
+    font: normal normal 600 8px/13px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    text-transform: capitalize;
+  }
+
+  &__btnC {
+    text-align: right;
+    text-decoration: underline;
+    font: normal normal 600 8px/13px Montserrat;
+    letter-spacing: 0px;
+    color: #e24c4b;
+    opacity: 1;
+  }
+}
+
+.deparment-file-modal {
+  max-width: 523px !important;
+  .body {
+    padding: 0px 60px;
+    h6 {
+      font: normal normal 600 18px/22px Montserrat;
+      text-transform: capitalize;
+      margin-bottom: 0;
+    }
+    p {
+      font: normal normal 100 14px/18px Montserrat;
+      text-transform: capitalize;
+    }
+    h4 {
+      text-align: center;
+      font: normal normal normal 18px/22px Montserrat;
+      letter-spacing: 0px;
+      color: #707070;
+    }
+  }
+}
+
+.switch-examle-outer {
+  padding-bottom: 6px;
+}

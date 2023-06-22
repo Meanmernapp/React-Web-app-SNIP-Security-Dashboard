@@ -1,14 +1,18 @@
-import React from 'react'
-import Navbar from '../Navbar'
-import { Outlet } from 'react-router';
+import React from "react";
+import Navbar from "../Navbar";
+import { Navigate, Outlet } from "react-router";
 
 const WithNav = () => {
-  return (
-      <>
-          <Navbar />
-          <Outlet/>
-      </>
-  )
-}
+  const isAuthenticated = localStorage.getItem("auth");
 
-export default WithNav
+  return isAuthenticated ? (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  ) : (
+    <Navigate to="/log-in-username" />
+  );
+};
+
+export default WithNav;

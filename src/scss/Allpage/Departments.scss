@@ -1,0 +1,469 @@
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+
+  // margin-bottom: 3em;
+  &__h1 {
+    // text-align: center;
+    font: normal normal bold 32px/50px Montserrat;
+    letter-spacing: 0px;
+    color: #00506a;
+    opacity: 1;
+    text-transform: uppercase;
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 26px/36px Montserrat !important;
+    }
+  }
+
+  &__p {
+    text-align: left;
+    font: normal normal normal 12px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    text-transform: capitalize;
+    margin-top: -19px;
+  }
+
+  &__buttons {
+    // width: 19em;
+    float: right !important;
+
+    &__addButton {
+      background: #00506a 0% 0% no-repeat;
+      box-shadow: 0px 0px 4px #00000080;
+      border-radius: 6px;
+      border: none;
+      width: 22em;
+      height: 3em;
+      text-transform: uppercase;
+      opacity: 1;
+      font: normal normal 600 14px/19px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+      @media only screen and (max-width: 992px) {
+        font: normal normal bold 12px/15px Montserrat !important;
+        margin-top: 10px;
+      }
+    }
+    &__downloadButton {
+      background: #63b3ce 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 4px #00000080;
+      border-radius: 6px;
+      border: none;
+      width: 18em;
+      height: 3em;
+      opacity: 1;
+      font: normal normal 600 14px/19px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal 600 12px/15px Montserrat;
+      }
+    }
+
+    &__deleteButton {
+      background: #e24c4b 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 4px #00000099;
+      border-radius: 4px;
+      width: 22em;
+      border: none;
+      height: 3em;
+      opacity: 1;
+      font: normal normal 600 14px/19px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+      margin-bottom: 1em;
+      @media only screen and (max-width: 992px) {
+        font: normal normal bold 12px/15px Montserrat !important;
+      }
+    }
+
+    &__icAdd {
+      height: 1em;
+      margin-bottom: 0.2em;
+    }
+  }
+}
+.accordion-button:focus {
+  border-color: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.dept-accordion-header {
+  &__checkbox {
+    transform: scale(1.5);
+    accent-color: #00506a;
+  }
+  &__link {
+    &__btn {
+      background: none;
+      border: none;
+      text-decoration: underline;
+      color: #707070;
+      // float: right;
+      text-align: left !important;
+      text-transform: capitalize;
+      font: normal normal bold 16px/19px Montserrat;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal bold 10px/13px Montserrat;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: left;
+    font: normal normal bold 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #63b3ce;
+    text-transform: uppercase;
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 12px/15px Montserrat;
+    }
+
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  &__data {
+    text-align: left;
+    text-transform: uppercase;
+    font: normal normal normal 18px/22px Montserrat;
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 12px/15px Montserrat;
+    }
+    margin: 0;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+  }
+}
+
+.department-main-heading {
+  opacity: 1;
+  margin-top: 1em !important;
+  &__btn {
+    text-align: center;
+    text-transform: capitalize;
+    font: normal normal normal 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    border: none;
+    background-color: white;
+    opacity: 1;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 10px/14px Montserrat;
+    }
+  }
+
+  &__extodos {
+    text-align: left;
+    font: normal normal normal 14px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+    opacity: 1;
+    border: none;
+    background-color: white;
+    @media only screen and (max-width: 992px) {
+      font: normal normal normal 10px/14px Montserrat;
+    }
+  }
+
+  &__todos {
+    text-align: center;
+    font: normal normal bold 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    text-transform: uppercase;
+    border: none;
+    background-color: white;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 12px/18px Montserrat;
+    }
+  }
+  &__dept {
+    text-align: center;
+    font: normal normal bold 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    border: none;
+    background-color: white;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 12px/18px Montserrat;
+    }
+  }
+  &__exdept {
+    text-align: center;
+    font: normal normal bold 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    border: none;
+    background-color: white;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 12px/18px Montserrat;
+    }
+  }
+}
+
+.dept-acc-header {
+  &__link {
+    &__btn {
+      background: none;
+      border: none;
+      text-decoration: underline;
+      color: #707070;
+      // float: right;
+      text-align: left !important;
+      font: normal normal bold 15px/19px Montserrat;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal bold 10px/13px Montserrat;
+      }
+    }
+  }
+}
+
+.dept-acc-body-one {
+  display: flex;
+
+  &__heading {
+    text-align: center;
+    display: inline;
+    font: normal normal bold 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #006594;
+    padding-right: 0.25em;
+    opacity: 1;
+    text-transform: capitalize;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 15px/18px Montserrat;
+    }
+  }
+
+  &__p {
+    display: inline;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #00506a;
+    opacity: 1;
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 11px/14px Montserrat;
+    }
+  }
+}
+
+.dept-acc-body-two {
+  display: flex;
+  justify-content: space-between;
+
+  &__ul {
+    list-style-type: square;
+    text-align: left;
+    font: normal normal normal 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    @media only screen and (max-width: 992px) {
+      font: normal normal normal 11px/14px Montserrat;
+    }
+  }
+}
+
+// .accordion-button {
+//     border-bottom: #00506A !important;
+// }
+
+.department-hr {
+  color: #63B3CE;
+  height: 0.2em !important;
+  margin-top: 2em;
+}
+
+.dropdown {
+  position: relative;
+  width: 10em !important;
+  // display: inline-block;
+  &__dropdown-icons {
+    height: 1.25em !important;
+  }
+  &__dropdown-content {
+    position: absolute;
+    background-color: #ffffff !important;
+    width: 17em !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    right: 2em;
+    z-index: 1;
+  }
+}
+
+.department-accordion {
+  box-shadow: 0px 0px 4px hsla(0, 0%, 0%, 0.3);
+  border-radius: 8px !important    ;
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  // z-index: -1;
+  // margin-bottom: 2em;
+}
+
+.department_arrow_down {
+  font-size: 3em;
+  position: absolute;
+  top: -0.2em;
+  // margin-bottom: .5em !important;
+  color: #00506a;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 1.5em !important;
+    top: 0.8em;
+  }
+}
+
+.department_arrow_up {
+  font-size: 3em;
+  position: absolute;
+  // margin-bottom: .5em !important;
+  color: #00506a;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 1.5em !important;
+    top: 0.6em;
+  }
+}
+.MuiStepContent-root {
+  margin-top: 40px !important;
+  border-left: 1px solid #bdbdbd;
+  margin-left: -40em !important;
+  padding-left: 20px;
+  padding-right: 8px;
+}
+.makeStyles-stepIcon-5 {
+  color: #707070 !important;
+}
+
+// .accordion-button{
+//     border-bottom: 3px dashed #00506A !important;
+//     // border-radius: 1em !important;
+
+// }
+.accordion-button:not(.collapsed) {
+  border-bottom: 2px dashed #00506a !important;
+}
+
+.roles-acc-body-one {
+  ul {
+    list-style: none;
+  }
+
+  ul li::before {
+    content: "\2022";
+    color: #63b3ce;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  &__rolesP {
+    display: inline;
+    font: normal normal normal 16px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #63b3ce;
+    opacity: 1;
+    text-transform: uppercase;
+  }
+
+  &__rolesLiP {
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+  }
+}
+.back-arrow {
+  height: 0.75em;
+  margin-bottom: 0.25em;
+  margin-right: 0.25em;
+}
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.5)!important;
+
+}
+.modal-backdrop{
+  background-color: rgba(0, 0, 0, 0.3)!important;
+}
+
+.css-1p823my-MuiListItem-root {
+  display: block !important;
+}
+
+//***************mohsin**************
+.departmint-container {
+  &__subtext {
+    margin-top: -12px;
+    text-align: left;
+    font: normal normal normal 14px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    text-transform: capitalize;
+  }
+}
+
+i {
+  cursor: pointer;
+}
+//*******department delte modal******
+.deparment-delete-modal {
+  max-width: 623px !important;
+  .body {
+    width: 80%;
+    margin: 0 auto;
+    h6 {
+      font: normal normal 600 16px/22px Montserrat;
+      text-transform: capitalize;
+      margin-bottom: 0;
+      color: #707070;
+    }
+    p {
+      font: normal normal 100 12px/18px Montserrat;
+      text-transform: capitalize;
+    }
+    span {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      i {
+        color: #00506a;
+      }
+      p {
+        font: normal normal 100 16px/22px Montserrat;
+        text-transform: capitalize;
+        margin: 0px 10px;
+      }
+      h5 {
+        font: normal normal bold 16px/22px Montserrat;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        color: #707070;
+      }
+    }
+  }
+}

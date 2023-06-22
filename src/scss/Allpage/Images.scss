@@ -1,0 +1,329 @@
+.images-header {
+  padding-top: 1em;
+
+  // margin-bottom: 3em;
+  &__h1 {
+    text-align: left;
+    font: normal normal bold 32px/40px Montserrat;
+    letter-spacing: 0px;
+    color: #00506a;
+    opacity: 1;
+    display: block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 22px/30px Montserrat;
+    }
+  }
+
+  &__p {
+    text-align: left;
+    padding-bottom: 0 !important;
+    font: normal normal normal 12px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-top: 0;
+    opacity: 1;
+    align-self: baseline;
+    text-transform: capitalize;
+    margin-top: -6px;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal bold 14px/30px Montserrat;
+    }
+  }
+
+  &__buttons {
+    // align-items: right !important;
+
+    &__downloadButton {
+      background: #63b3ce 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 4px #00000099;
+      border-radius: 4px;
+      height: 3em;
+      font: normal normal 600 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+      margin-bottom: 0.5em;
+      // margin-right: 2em;
+      opacity: 1;
+      border: none;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal 600 10px/14px Montserrat;
+        height: 3em;
+      }
+    }
+
+    &__addButton {
+      background: #00506a 0% 0% no-repeat;
+      box-shadow: 0px 0px 4px #00000080;
+      border-radius: 6px;
+      border: none;
+      height: 3em;
+      opacity: 1;
+
+      font: normal normal 600 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+      margin-bottom: 0.5em;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal 600 10px/14px Montserrat;
+        height: 3em;
+      }
+    }
+
+    &__deleteButton {
+      background: #e24c4b 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 4px #00000099;
+      border-radius: 4px;
+      border: none;
+
+      height: 3em;
+      opacity: 1;
+      font: normal normal 600 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: #ffffff;
+      margin-bottom: 0.5em;
+
+      @media only screen and (max-width: 992px) {
+        font: normal normal 600 10px/15px Montserrat;
+        height: 3em;
+      }
+    }
+
+    &__icAdd {
+      height: 0.75em;
+
+      margin: 0em 0em 0.1em 0.5em !important;
+
+      @media only screen and (max-width: 992px) {
+        height: 0.85em;
+      }
+    }
+
+    &__icAddHome {
+      height: 1em;
+      margin-bottom: 0.1em;
+      // margin: auto ;
+    }
+  }
+}
+
+.images-table-heading {
+  font: normal normal bold 28px/34px Montserrat;
+  letter-spacing: 0px;
+  color: #006594;
+  opacity: 1;
+
+  // text-align: left;
+  &__headings {
+    text-align: center;
+    font: normal normal bold 15px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #63b3ce;
+    opacity: 1;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal 600 11px/18px Montserrat;
+      height: 3em;
+    }
+  }
+}
+
+.images-main-table {
+  margin-top: 2em;
+}
+
+.vl-image {
+  border-right: 4px solid #00506a;
+  // margin-top: ;
+  height: 70vh;
+}
+
+.images-table-data {
+  &__columnOne {
+    text-align: center;
+    font: normal normal normal 10px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal normal 12px/16px Montserrat;
+    }
+  }
+
+  &__column {
+    text-align: center;
+    // margin: ;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+
+    @media only screen and (max-width: 992px) {
+      font: normal normal normal 12px/16px Montserrat;
+    }
+
+    &__checkBox {
+      // align-items: center !important;
+      margin: 0 auto;
+    }
+  }
+}
+
+.images-model-top {
+  text-align: center !important;
+  font: normal normal bold 12px/29px Montserrat;
+  // letter-spacing: 2px !important;
+  letter-spacing: 6px !important;
+  // margin-top: 1.5em !important;
+  color: #00506a !important;
+  margin: 0.5em auto !important;
+  opacity: 1 !important;
+}
+
+.images-model-body {
+  // padding: 0 2em !important;
+  &__img {
+    margin-top: 1.5em !important;
+    // margin-left: 8em !important;
+    height: 8em;
+  }
+
+  &__heading {
+    text-align: center;
+    font: normal normal 600 18px/22px Montserrat;
+    letter-spacing: 0px;
+    margin: 0;
+    color: #707070;
+    opacity: 1;
+  }
+
+  &__addImage-p {
+    // margin-top: 1em !important;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+  }
+
+  &__addImage-upload {
+    border: 1px dashed #707070b3;
+    border-radius: 4px;
+    opacity: 1;
+    // padding-top: 1em;
+    display: flex;
+  }
+
+  &__addImage-upload-one {
+    border: 1px dashed #707070b3;
+    border-radius: 4px;
+    opacity: 1;
+    width: 20em;
+    display: flex;
+  }
+
+  &__cloudImage {
+    height: 2.5em !important;
+    // margin: 2em 1em;
+  }
+
+  &__p {
+    text-align: center;
+    margin: 1em 0.5em;
+    font: normal normal normal 18px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #707070b3;
+  }
+
+  &__p span {
+    text-align: center;
+    font: normal normal bold 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #707070b3;
+  }
+
+  &__Image-upload {
+    // margin: 0.5em 1em !important;
+    height: 10em !important;
+    width: 100%;
+  }
+}
+
+.images-model-confirm-btn {
+  background: #00506a 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  text-align: center;
+  font: normal normal bold 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  width: 30em;
+  border: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.images-table-full {
+  margin-bottom: 1em;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 4px #00000080;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+tr {
+  line-height: 24px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+.container-scroll {
+  overflow-x: auto;
+}
+
+.images-model-row {
+  display: flex;
+}
+.images-model-row-one {
+  display: flex;
+  align-items: center;
+  width: 20em;
+  margin: 0 1em !important;
+  justify-content: center;
+  margin: auto;
+  @media only screen and (max-width: 992px) {
+    margin: auto;
+  }
+}
+.right-image-text {
+  text-align: end;
+  @media only screen and (max-width: 992px) {
+    text-align: start;
+  }
+}
+
+.pdf-row-image-outer {
+  float: right;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+.loadPhone__images {
+  height: 1.6em !important;
+  margin-top: 7px;
+}
+
+.edit-image-body {
+  padding: 0px 20px 0px 20px;
+}
+
+.modal-backdrop.show{
+  opacity: 0.4 !important;
+}

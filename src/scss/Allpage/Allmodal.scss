@@ -1,17 +1,6 @@
-.primary-modal {
-}
-
-.modal-content {
-  width: 320px !important;
-  border-radius: 4px !important;
-  overflow: hidden;
-}
-
 .main-modal-heading {
   text-align: center;
-  font: normal normal bold 17px Montserrat;
   letter-spacing: 3px;
-  color: #006837;
   opacity: 1;
   padding: 15px 0;
 }
@@ -21,6 +10,7 @@
     width: 80%;
     margin: auto;
   }
+
   th {
     width: 50%;
     white-space: pre;
@@ -28,6 +18,7 @@
     font-weight: 400;
     padding: 3px 0;
   }
+
   td {
     padding: 5px 0;
 
@@ -54,10 +45,12 @@
   background-color: #fff;
   color: #006837;
 }
+
 .btn-confirm {
   background-color: #006837;
   color: #fff;
 }
+
 .btn-div {
   display: flex;
   justify-content: center;
@@ -109,6 +102,7 @@
   color: #707070;
   opacity: 1;
 }
+
 .modal-list-style {
   padding-left: 14px;
   padding-top: 10px;
@@ -135,17 +129,34 @@ ul li::before {
   opacity: 1;
 }
 
-.Actual_h1{
+.Actual_h1 {
   padding-bottom: 50px;
-  margin-left: 8%;
+  // padding-left: 5em !important;
   padding-top: 20px;
+  // margin-left: 4.5em;
+
   text-align: left;
-  font: normal normal bold 32px/42px Montserrat;
+  font: normal normal bold 30px/42px Montserrat;
   letter-spacing: 0px;
-  color: #006837;
+  color: #00506A;
   opacity: 1;
+
+  @media only screen and (max-width: 992px) {
+    font: normal normal bold 20px/32px Montserrat;
+    // padding-left: 5em !important;
+    // margin-left: 4em;
+    padding-bottom: 25px;
+
+  }
 }
-.modal_button{
+
+.modal_button {
   margin-left: 30%;
   padding-top: 12%;
+}
+
+
+.main-home-right{
+  width: 100vw;
+  box-sizing: border-box;
 }

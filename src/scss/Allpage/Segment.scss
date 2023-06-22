@@ -1,0 +1,141 @@
+.switch-example {
+  &__icAdd-download {
+    height: 1.25em !important;
+  }
+}
+
+.segment-rightColumn {
+  &__firstItem {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 4px #00000099;
+    opacity: 1;
+    padding: 0 2em 0 1em;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 1em !important;
+
+    @media only screen and (max-width: 992px) {
+      padding: 0 0.25em;
+    }
+  }
+
+  &__delete-icon {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+
+    img {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 3px;
+
+      &:hover {
+        background-color: #0000001a;
+      }
+    }
+  }
+}
+
+.firstItem-div-segment {
+  // padding: 1em 0 !important;
+  position: relative;
+  margin: 1em 0 !important;
+}
+
+.col-xs-0,
+.col-sm-0,
+.col-md-0 {
+  flex: 0 0 0;
+  max-width: 0;
+}
+
+.evidencias {
+  &__buttonCancel {
+    width: 322px;
+    height: 35px;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #bc0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #ffffff;
+    &:hover {
+      background-color: #cfcacaca;
+    }
+  }
+
+  &__buttonOk {
+    width: 322px;
+    height: 35px;
+    background: #00506a 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    font: normal normal bold 14px/18px Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border: none;
+  }
+}
+
+//*******department delte modal******
+.modal-content {
+  border: none !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.deparment-follow-modal {
+  max-width: 559px !important;
+  &__header {
+    font: normal normal bold 22px/29px Montserrat;
+    letter-spacing: 7px;
+    color: #00506a;
+    margin-top: 1.3em;
+    padding: 0 1.1em;
+    margin-left: 0.2em;
+    text-transform: uppercase;
+  }
+  .body {
+    padding: 0.7em 1.8em;
+    h6 {
+      font: normal normal 600 16px/22px Montserrat;
+      letter-spacing: 0px;
+      color: #707070;
+      text-transform: lowercase;
+      margin-bottom: 0;
+    }
+    p {
+      font: normal normal 100 14px/18px Montserrat;
+      text-transform: capitalize;
+    }
+    span {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      i {
+        color: #00506a;
+      }
+      p {
+        font: normal normal 100 16px/22px Montserrat;
+        text-transform: capitalize;
+        margin: 0px 10px;
+      }
+      h5 {
+        font: normal normal bold 16px/22px Montserrat;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        color: #707070;
+      }
+    }
+  }
+}
+
+.switch-search-heading {
+  padding-left: 5vh;
+  font: normal normal 400 16px/22px Montserrat;
+
+}
